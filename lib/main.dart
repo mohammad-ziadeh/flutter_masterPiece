@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'pages/login.dart';
-import 'pages/signup.dart';
+// import 'pages/signup.dart';
 import 'pages/attendance.dart';
+import 'pages/students.dart';
 import 'splash_screen.dart';
 import 'pages/mainPage.dart';
 
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Theme-based Color Change',
+      title: 'LMC (Learning Management Center)',
 
       // ----- {{ Light Theme }} ----- //
       theme: ThemeData.light().copyWith(
@@ -57,7 +58,6 @@ class _MyAppState extends State<MyApp> {
           iconTheme: IconThemeData(color: Colors.white),
         ),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          // backgroundColor: Colors.black,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white70,
         ),
@@ -76,10 +76,10 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       routes: {
         '/': (context) => SplashScreen(),
-        '/signup': (context) => Signup(),
         '/login': (context) => Login(),
         '/home': (context) => MainPage(onToggleTheme: _toggleTheme),
         '/attendance': (context) => Attendance(),
+        '/students': (context) => StudentsPage(onToggleTheme: _toggleTheme),
       },
     );
   }

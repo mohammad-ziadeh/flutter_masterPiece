@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
+//import 'package:masterpiece_flutter/components/studentDetails.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert'; // for json decoding
+import 'dart:convert'; 
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'dart:io' show Platform;
 
 String getServerUrl() {
   if (kIsWeb) {
-    return 'http://127.0.0.1:8000'; 
+    return 'http://127.0.0.1:8000';
   } else if (Platform.isAndroid) {
     return 'http://192.168.1.160:8000';
   } else {
-    return 'http://127.0.0.1:8000'; 
+    return 'http://127.0.0.1:8000';
   }
 }
+
 Future<List<dynamic>> fetchStudents() async {
   final response = await http.get(Uri.parse('${getServerUrl()}/api/students'));
   if (response.statusCode == 200) {
     final Map<String, dynamic> data = jsonDecode(response.body);
-    return data.values.toList(); 
+    return data.values.toList();
   } else {
     throw Exception('Failed to load students');
   }
@@ -66,15 +68,18 @@ class _StudentsPageState extends State<StudentsPage> {
                     leading: Text(student['id'].toString()),
                     title: Text(
                       student['name'] ?? 'No Name',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 4),
-                        Text(student['role'] ?? 'No Role'),
-                      ],
-                    ),
+                    subtitle: Text(student['role'] ?? 'No Role'),
+                    onTap: () {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder:
+                      //         (context) => StudentDetailPage(student: student),
+                      //   ),
+                      // );
+                    },
                   ),
                 );
               },

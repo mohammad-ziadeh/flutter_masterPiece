@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
       navigateRoute: Login(),
       duration: 8000,
       imageSize: 230,
-      imageSrc: "images/logo.png",
+      imageSrc: "assets/images/logo.png",
       text: "Learning Management Center",
       textType: TextType.ColorizeAnimationText,
       textStyle: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),

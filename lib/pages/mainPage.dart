@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:masterpiece_flutter/components/heroSection.dart';
 import 'package:masterpiece_flutter/pages/attendance.dart';
+import 'package:masterpiece_flutter/pages/spinningWheel.dart';
 
 class MainPage extends StatefulWidget {
   final VoidCallback onToggleTheme;
@@ -14,7 +15,11 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [HeroSection(), Attendance()];
+  final List<Widget> _pages = [
+    HeroSection(),
+    Attendance(),
+    SpinningWheel(),
+  ];
 
   void _onTabSelected(int index) {
     setState(() {
@@ -42,6 +47,10 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
             label: 'Attendance',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.auto_mode),
+            label: 'Wheel of Fortune',
           ),
         ],
         currentIndex: _selectedIndex,

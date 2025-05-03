@@ -11,10 +11,12 @@ class HeroSection extends StatefulWidget {
 class _HeroSectionState extends State<HeroSection> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Column(
       children: [
         Statistics(),
-        SizedBox(height: 100),
+        SizedBox(height: 50),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -47,7 +49,7 @@ class _HeroSectionState extends State<HeroSection> {
                     ),
                   ),
                 ),
-                SizedBox(width: 40),
+                SizedBox(width: screenWidth > 600 ? 100 : 40),
                 Container(
                   margin: EdgeInsets.only(top: 20),
                   child: SizedBox(

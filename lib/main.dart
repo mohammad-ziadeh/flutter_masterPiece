@@ -39,11 +39,11 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFF3B1E54),
-          iconTheme: IconThemeData(color: Colors.white),
+          iconTheme: IconThemeData(color: Color(0xFFeeeeee)),
         ),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: Color(0xFF3B1E54),
-          selectedItemColor: Colors.white,
+          selectedItemColor: Color(0xFFeeeeee),
           unselectedItemColor: Colors.white70,
         ),
         iconTheme: const IconThemeData(color: Color(0xFF3B1E54)),
@@ -54,11 +54,13 @@ class _MyAppState extends State<MyApp> {
       // ----- {{ Dark Theme }} ----- //
       darkTheme: ThemeData.dark().copyWith(
         appBarTheme: const AppBarTheme(
-          //   backgroundColor: Colors.black,
-          iconTheme: IconThemeData(color: Colors.white),
+          backgroundColor: Color.fromARGB(255, 24, 12, 33),
+          iconTheme: IconThemeData(color: Color(0xFFeeeeee)),
         ),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 10, 5, 13),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          selectedItemColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 24, 12, 33),
+          selectedItemColor: Color(0xFFeeeeee),
           unselectedItemColor: Colors.white70,
         ),
         iconTheme: const IconThemeData(

@@ -62,6 +62,8 @@
 
 //   @override
 //   Widget build(BuildContext context) {
+//   double screenWidth = MediaQuery.of(context).size.width;
+
 // if (isLoading) {
 //   return Padding(
 //     padding: const EdgeInsets.only(top: 20),
@@ -86,7 +88,7 @@
 //             ),
 //           ),
 //         ),
-//         SizedBox(width: 40),
+//         SizedBox(width: screenWidth > 600 ? 100 : 40),
 //         Container(
 //           width: 160,
 //           height: 160,
@@ -118,6 +120,8 @@ class Statistics extends StatefulWidget {
 class _StatisticsState extends State<Statistics> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -137,7 +141,7 @@ class _StatisticsState extends State<Statistics> {
                 ),
               ),
             ),
-            SizedBox(width: 40),
+            SizedBox(width: screenWidth > 600 ? 100 : 40),
             Container(
               width: 160,
               height: 160,

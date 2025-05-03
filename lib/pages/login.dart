@@ -79,9 +79,7 @@ class _LoginState extends State<Login> {
                           children: [
                             Text(
                               "Don't have an account?",
-                              style: TextStyle(
-                                color: const Color(0xFF3B1E54),
-                              ),
+                              style: TextStyle(color: const Color(0xFF3B1E54)),
                             ),
                             TextButton(
                               onPressed: () {

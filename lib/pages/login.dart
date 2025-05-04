@@ -72,29 +72,29 @@ class _LoginState extends State<Login> {
                           child: Text("Login"),
                         ),
                       ),
-                      const SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 50),
-                        child: Row(
-                          children: [
-                            Text(
-                              "Don't have an account?",
-                              style: TextStyle(color: const Color(0xFF3B1E54)),
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/signup');
-                              },
-                              child: Text(
-                                "Sign Up",
-                                style: TextStyle(
-                                  color: const Color(0xFF3B1E54),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      // const SizedBox(height: 10),
+                      // Padding(
+                      //   padding: const EdgeInsets.symmetric(horizontal: 50),
+                      //   child: Row(
+                      //     children: [
+                      //       Text(
+                      //         "Don't have an account?",
+                      //         style: TextStyle(color: const Color(0xFF3B1E54)),
+                      //       ),
+                      //       // TextButton(
+                      //       //   onPressed: () {
+                      //       //     Navigator.pushNamed(context, '/signup');
+                      //       //   },
+                      //       //   child: Text(
+                      //       //     "Sign Up",
+                      //       //     style: TextStyle(
+                      //       //       color: const Color(0xFF3B1E54),
+                      //       //     ),
+                      //       //   ),
+                      //       // ),
+                      //     ],
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

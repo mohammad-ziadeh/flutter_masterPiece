@@ -3,6 +3,7 @@ import 'pages/login.dart';
 // import 'pages/signup.dart';
 import 'pages/attendance.dart';
 import 'pages/students.dart';
+import 'pages/submissions.dart';
 import 'splash_screen.dart';
 import 'pages/mainPage.dart';
 
@@ -81,6 +82,7 @@ class _MyAppState extends State<MyApp> {
         '/login': (context) => Login(),
         '/home': (context) => MainPage(onToggleTheme: _toggleTheme),
         '/attendance': (context) => Attendance(),
+        '/submissions': (context) => SubmissionsPage(onToggleTheme: _toggleTheme),
         '/students': (context) => StudentsPage(onToggleTheme: _toggleTheme),
       },
     );

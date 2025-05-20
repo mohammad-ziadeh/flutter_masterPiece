@@ -45,7 +45,7 @@ class _AttendanceState extends State<Attendance> {
           for (var user in users) {
             int userId = user['id'];
             String status =
-                attendancesData[userId.toString()]?['status'] ?? 'absent';
+                attendancesData[userId.toString()]?['status'] ?? 'present';
             attendance[userId] = status;
           }
 

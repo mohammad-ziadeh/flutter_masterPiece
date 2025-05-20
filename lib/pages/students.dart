@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:masterpiece_flutter/components/studentDetails.dart';
+import 'package:masterpiece_flutter/components/studentDetails.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert'; 
 import 'package:flutter/foundation.dart' show kIsWeb;
@@ -72,13 +72,13 @@ class _StudentsPageState extends State<StudentsPage> {
                     ),
                     subtitle: Text(student['role'] ?? 'No Role'),
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder:
-                      //         (context) => StudentDetailPage(student: student),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder:
+                              (context) => StudentDetailPage(student: student),
+                        ),
+                      );
                     },
                   ),
                 );

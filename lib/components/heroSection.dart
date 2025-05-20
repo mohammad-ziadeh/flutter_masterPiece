@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:masterpiece_flutter/components/statistics.dart';
 
+
 class HeroSection extends StatefulWidget {
   const HeroSection({super.key});
 
@@ -60,7 +61,9 @@ class _HeroSectionState extends State<HeroSection> {
                         style: ElevatedButton.styleFrom(
                           shadowColor: Colors.transparent,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                           Navigator.pushNamed(context, '/submissions');
+                        },
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
